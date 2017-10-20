@@ -24,7 +24,7 @@ public class ProjectTester {
   }
 
   @Test
-  public void isWellSorted_ordered_descending_true() {
+  public void isWellSorted_ordered_descending_false() {
     assertFalse(testfall.isWellSorted(new String[]{"D", "C", "B", "A"}));
   }
 }
