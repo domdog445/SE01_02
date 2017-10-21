@@ -40,5 +40,22 @@ public class ProjectTester {
     assertFalse(testfall.isWellSorted(new String[]{"A", "B", "C"}));
   }
 
+  @Test
+  public void isWellSorted_orderedAscendingWrongStep_false() {
+    assertFalse(testfall.isWellSorted(new String[]{"A", "B", "C", "D", "E"}));
+  }
+
+  public void isWellSorted_orderedAscendingWrongAndMissingStep_false() {
+	    assertFalse(testfall.isWellSorted(new String[]{"A", "E", "C", "D" }));
+  }
+
+  public void isWellSorted_notEnoughStepsAndWrongStep_false() {
+	    assertFalse(testfall.isWellSorted(new String[]{"E", "C"}));
+  }
+
+  public void isWellSorted_wrongStepsAndWrongFormat_false() {
+	    assertFalse(testfall.isWellSorted(new String[]{"CompletelyWrong"}));
+  }
+
 }
     
