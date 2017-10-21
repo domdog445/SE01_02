@@ -63,6 +63,11 @@ public class Project {
 		rulesreset(); 
 		for(int i = 0; i< sequence.length;i++)
 		{ 
+			//Existiert der Prozess überhaupt
+			if(!existprozess(sequence[i]))
+			{ 
+				return false; 
+			}
 			Rule testrule = getrulebyname(sequence[i]);
 			//Sind alle Vorbedingunen erledigt 
 			for(Rule tmprequirements : testrule.Bedingungen)
