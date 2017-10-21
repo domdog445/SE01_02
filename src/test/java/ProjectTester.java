@@ -5,10 +5,7 @@ import org.junit.Test;
 
 
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
-import org.junit.Test;
 
 public class ProjectTester {
   Project testfall;
@@ -27,5 +24,21 @@ public class ProjectTester {
   public void isWellSorted_ordered_descending_false() {
     assertFalse(testfall.isWellSorted(new String[]{"D", "C", "B", "A"}));
   }
+
+  @Test
+  public void isWellSorted_wrongOrder_false() {
+    assertFalse(testfall.isWellSorted(new String[]{"C", "A", "D", "B"}));
+  }
+
+  @Test
+  public void isWellSorted_wrongOrderAndMissingStep_false() {
+    assertFalse(testfall.isWellSorted(new String[]{"D", "C", "A"}));
+  }
+
+  @Test
+  public void isWellSorted_orderedAndMissingStep_false() {
+    assertFalse(testfall.isWellSorted(new String[]{"A", "B", "C"}));
+  }
+
 }
     
