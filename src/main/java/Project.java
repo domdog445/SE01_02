@@ -74,6 +74,15 @@ public class Project {
 			}
 			testrule.checked = true; 
 			} 
+		
+		//Wurden alle Prozesse abgehandelt 
+				for(Rule tmpregel : regeln) 
+				{
+					if(tmpregel.checked == false) 
+					{ 
+						return false; 
+					} 
+				} 
 		return true; 
 	} // Reset Status
 
